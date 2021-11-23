@@ -1,0 +1,45 @@
+{
+    "Queen Greatest Hits": {
+        "band": "Queen",
+        "side_A": [
+            "bohemian rhapsody",
+            "another one bites the dust",
+            "killer queen",
+            "fat bottomed girls",
+            "bicycle race",
+            "you're my best friend",
+            "don't stop me now",
+            "save me"
+        ],
+        "side_B": [
+            "crazy little thing called love",
+            "somebody to love",
+            "now i'm here",
+            "good old-fasioned lover boy",
+            "play the game",
+            "flash",
+            "seven seas of rhye",
+            "we will rock you",
+            "we are the champions"
+        ],
+        "price": 290.0
+    },
+    "\u0e44\u0e17\u0e17\u0e28\u0e21\u0e34\u0e15\u0e23": {
+        "band": "Taitosmith",
+        "side_A": [
+            "\u0e2e\u0e32\u0e04\u0e39\u0e19\u0e48\u0e32 \u0e21\u0e32\u0e17\u0e32\u0e17\u0e48\u0e32",
+            "amazing thailand",
+            "\u0e22\u0e38\u0e15\u0e34-\u0e18\u0e23\u0e23\u0e21",
+            "hello mama",
+            "\u0e23\u0e2a\u0e19\u0e34\u0e22\u0e21"
+        ],
+        "side_B": [
+            "\u0e1a\u0e31\u0e07\u0e02\u0e32\u0e22\u0e16\u0e31\u0e48\u0e27",
+            "\u0e23\u0e08\u0e19\u0e32",
+            "\u0e41\u0e14\u0e07\u0e01\u0e31\u0e1a\u0e40\u0e02\u0e35\u0e22\u0e27",
+            "\u0e15\u0e23\u0e32\u0e1a",
+            "\u0e04\u0e32\u0e07\u0e04\u0e01"
+        ],
+        "price": 690.0
+    }
+}

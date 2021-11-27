@@ -1,2 +1,40 @@
-# Cassette tape project
- Computer programing 1 Project
+# Cassette Tape Collection
+
+This program is a part of the 01219114 Computer Programming 1 course. It's also
+intended to create a cassette tape collection for those of you who, like
+myself, enjoy collecting cassette tapes.
+
+## Modules
+
+This program consists of three modules.
+
+1. [cassette.py](cassette.py)
+   This module contains the `CassetteTape` class, which is used to create each
+   cassette tape data.
+
+2. [data.py](data.py)
+   This module contains the `CollectionData` class, which is used to create a
+   database file as 'json' file.
+
+3. [stage.py](stage.py)
+   This module contains the `Stage` class, which is used to create all of the
+   graphical output in this program.
+
+## Main Program
+
+If you want to run this program please use [app.py](app.py).
+
+The program includes six menus for the user's convenience.
+
+* Inset new tape.
+* Search tape from collection.
+* Delete tape from collection.
+* Show all cassette tapes in collection.
+* Find song from cassette tapes.
+* Show all song in cassette tape.
+
+### I hope you find my work interesting :)
+
+![screen](tape.gif)
+
+(pic from: https://images.app.goo.gl/NsaGK3WighNjwq2i8)

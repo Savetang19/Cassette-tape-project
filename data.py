@@ -1,14 +1,29 @@
 import json
 
-
 class CollectionData:
     def __init__(self, name):
+        """ Initialize new database for the collection.
+
+        :param name: Name of the database collection.
+        :type name: str
+        """
         self.name = name
 
     def __repr__(self):
+        """ Create a string representation of the database.
+
+        :return: A string representation.
+        :rtype: str
+        """
         return f"CollectionData(name={self.name})"
 
     def insert(self, cassette_tape):
+        """ Insert new cassette tape data to the database by using
+        'cassette_tape' as '.json' file.
+
+        :param cassette_tape: New cassette tape to insert.
+        :type cassette_tape: CassetteTape
+        """
         new_tape = {
             cassette_tape.name: {
                 "band": cassette_tape.band,
@@ -29,6 +44,13 @@ class CollectionData:
                 json.dump(collection, data_file, indent=4)
 
     def search(self, tape_name):
+        """ Search and return data of cassette tape by using tape_name.
+
+        :param tape_name: Name of the cassette tape.
+        :type tape_name: str
+        :return: The result of the data search.
+        :rtype: str
+        """
         try:
             with open(f"{self.name}.json", "r") as data_file:
                 collection = json.load(data_file)
@@ -37,9 +59,16 @@ class CollectionData:
         except KeyError:
             return f"No cassette tape name: {tape_name} in collection."
         except FileNotFoundError:
-            return "No collection's data."
+            return "No collection data."
 
     def delete(self, tape_name):
+        """ Delete cassette tape data from the database by using tape_name.
+
+        :param tape_name: Name of the cassette tape.
+        :type tape_name: str
+        :return: The result of the data delete.
+        :rtype: str
+        """
         try:
             with open(f"{self.name}.json", "r") as data_file:
                 collection = json.load(data_file)
@@ -50,18 +79,30 @@ class CollectionData:
         except KeyError:
             return f"No cassette tape name: {tape_name} in collection."
         except FileNotFoundError:
-            return "No collection's data."
+            return "No collection data."
 
     def all_tape(self):
+        """ Return the names of all cassette tapes from the database.
+
+        :return: All tapes name or string if no collection data.
+        :rtype: list or str
+        """
         try:
             with open(f"{self.name}.json", "r") as data_file:
                 collection = json.load(data_file)
             all_name = [name for name in collection.keys()]
             return all_name
         except FileNotFoundError:
-            return "No collection's data."
+            return "No collection data."
 
     def search_song(self, song_name):
+        """ Search and return data of song by using song_name.
+
+        :param song_name: Name of the song.
+        :type song_name: str
+        :return: The result of the data search.
+        :rtype: str
+        """
         try:
             with open(f"{self.name}.json", "r") as data_file:
                 collection = json.load(data_file)
@@ -73,19 +114,24 @@ class CollectionData:
                     tape_name = f"tape name: {tape} on side B"
             return tape_name
         except FileNotFoundError:
-            return "No collection's data."
+            return "No collection data."
 
     def all_song_in_tape(self, tape_name):
+        """ Find and return all song from the cassette tape by using tape_name.
+
+        :param tape_name: Name of the cassette tape.
+        :type tape_name: str
+        :return: All song from cassette tape or string if no collection data.
+        :rtype: list or str
+        """
         try:
             with open(f"{self.name}.json", "r") as data_file:
                 collection = json.load(data_file)
-            all_song = []
-            all_song += [
-                [song_a for song_a in collection[tape_name]["side_A"]]]
-            all_song += [
-                [song_b for song_b in collection[tape_name]["side_B"]]]
-            return all_song
+            song = []
+            song += [[song_a for song_a in collection[tape_name]["side_A"]]]
+            song += [[song_b for song_b in collection[tape_name]["side_B"]]]
+            return song
         except KeyError:
             return f"No cassette tape name: {tape_name} in collection."
         except FileNotFoundError:
-            return "No collection's data."
+            return "No collection data."

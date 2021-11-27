@@ -3,6 +3,15 @@ from data import CollectionData
 
 class CassetteTape:
     def __init__(self, name, band, db):
+        """ Initialize CassetteTape object.
+
+        :param name: Name of the cassette tape.
+        :type name: str
+        :param band: Band's naem of the cassette tape.
+        :type band: str
+        :param db: The database of the cassette tape collection.
+        :type db: CollectionData
+        """
         self.name = name
         self.band = band
         self.db = db
@@ -12,47 +21,56 @@ class CassetteTape:
         db.insert(self)
 
     def __repr__(self):
+        """ Create a string representation of the cassette tape.
+
+        :return: A string representation.
+        :rtype: str
+        """
         return f'Cassette tape Name: "{self.name}"\nBand: "{self.band}"\n' \
                f'price: {self.price} Baht'
 
     @property
     def name(self):
-        return self.name
+        """ Get or set the name of the cassette tape."""
+        return self.__name
 
     @name.setter
     def name(self, name):
         if not isinstance(name, str):
             raise TypeError("Name must be a string.")
-        self.name = name
+        self.__name = name
 
     @property
     def band(self):
-        return self.band
+        """ Get or set the band's name of the cassette tape."""
+        return self.__band
 
     @band.setter
     def band(self, band):
         if not isinstance(band, str):
             raise TypeError("Band must be a string.")
-        self.band = band
+        self.__band = band
 
     @property
     def price(self):
-        return self.price
+        """ Get or set the price of the cassette tape."""
+        return self.__price
 
     @price.setter
     def price(self, price):
         if not isinstance(price, (int, float)):
-            TypeError("Price must be a string.")
+            TypeError("Price must be a number.")
         if price < 0:
             raise ValueError("Price must greater or equal to zero.")
-        self.price = price
+        self.__price = price
 
     @property
     def db(self):
-        return self.db
+        """ Get or set the database for the cassette tape collection."""
+        return self.__db
 
     @db.setter
     def db(self, db):
         if not isinstance(db, CollectionData):
             raise TypeError("bd must be a CollectionData object.")
-        self.db = db
+        self.__db = db

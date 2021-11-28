@@ -34,7 +34,7 @@ The program includes six menus for the user's convenience.
 * Show all song in cassette tape.
 * Open cassette tape on youtube.
 
-####For better experience please download font `Consolas` into your computer.
+**For better experience please download font `Consolas` into your computer.**
 
 ### I hope you find my work interesting :)
 

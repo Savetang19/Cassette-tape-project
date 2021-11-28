@@ -20,6 +20,10 @@ This program consists of three modules.
    This module contains the `Stage` class, which is used to create all of the
    graphical output in this program.
 
+More than three Python modules are also used in this program. The first is [`turtle`](https://docs.python.org/3/library/turtle.html),
+which is used for the graphical part, the second is [`os`](https://docs.python.org/3/library/os.html?highlight=os#module-os), which is used to browse a URL, 
+and the third is [`json`](https://docs.python.org/3/library/json.html?highlight=json#module-json), which is used for data collection.
+
 ## Main Program
 
 If you want to run this program please use [app.py](app.py).

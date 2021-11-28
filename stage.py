@@ -202,4 +202,8 @@ class Stage:
                 p.goto(0, 40)
                 p.write(f"{url}", True, "center", ("Consolas", 18, "normal"))
             else:
-                os.system(f"open \"\" {url}")  # Open youtube via url.
+                # Check if the user's computer's operating system is MacOS or not.
+                if os.name == 'posix':
+                    os.system(f"open \"\" {url}")
+                else:
+                    os.system(f"start \"\" {url}")

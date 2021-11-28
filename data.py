@@ -1,5 +1,6 @@
 import json
 
+
 class CollectionData:
     def __init__(self, name):
         """ Initialize new database for the collection.
@@ -29,7 +30,8 @@ class CollectionData:
                 "band": cassette_tape.band,
                 "side_A": cassette_tape.sidea,
                 "side_B": cassette_tape.sideb,
-                "price": cassette_tape.price
+                "price": cassette_tape.price,
+                "link": cassette_tape.url
             }
         }
         try:
@@ -131,6 +133,24 @@ class CollectionData:
             song += [[song_a for song_a in collection[tape_name]["side_A"]]]
             song += [[song_b for song_b in collection[tape_name]["side_B"]]]
             return song
+        except KeyError:
+            return f"No cassette tape name: {tape_name} in collection."
+        except FileNotFoundError:
+            return "No collection data."
+
+    def url_open(self, tape_name):
+        """ Find and return youtube link of the cassette tape by using
+        tape_name.
+
+        :param tape_name: Name of the cassette tape.
+        :type tape_name: str
+        :return: Result from find the url.
+        :rtype: str
+        """
+        try:
+            with open(f"{self.name}.json", "r") as data_file:
+                collection = json.load(data_file)
+            return collection[tape_name]["link"]
         except KeyError:
             return f"No cassette tape name: {tape_name} in collection."
         except FileNotFoundError:

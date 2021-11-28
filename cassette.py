@@ -18,6 +18,7 @@ class CassetteTape:
         self.sidea = []
         self.sideb = []
         self.price = 0
+        self.url = ""
         db.insert(self)
 
     def __repr__(self):
@@ -63,6 +64,16 @@ class CassetteTape:
         if price < 0:
             raise ValueError("Price must greater or equal to zero.")
         self.__price = price
+
+    @property
+    def url(self):
+        return self.__url
+
+    @url.setter
+    def url(self, url):
+        if not isinstance(url, str):
+            raise TypeError("Url link must be a string.")
+        self.__url = url
 
     @property
     def db(self):

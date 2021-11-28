@@ -28,7 +28,7 @@ and the third is [`json`](https://docs.python.org/3/library/json.html?highlight=
 
 If you want to run this program please use [app.py](app.py).
 
-The program includes six menus for the user's convenience.
+The program includes seven menus for the user's convenience.
 
 * Inset new tape.
 * Search tape from collection.
@@ -44,4 +44,4 @@ The program includes six menus for the user's convenience.
 
 ![screen](tape.gif)
 
-(pic from: https://images.app.goo.gl/NsaGK3WighNjwq2i8)
+(pic from [here](https://images.app.goo.gl/NsaGK3WighNjwq2i8))

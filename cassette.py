@@ -2,12 +2,24 @@ from data import CollectionData
 
 
 class CassetteTape:
+    """ This class used to initialize new cassette tape.
+
+    Attributes
+    ----------
+    name: str
+        Name of the cassette tape.
+    band: str
+        Band's name of the cassette tape.
+    db: CollectionData
+        The database of the cassette tape collection.
+    """
+
     def __init__(self, name, band, db):
-        """ Initialize CassetteTape object.
+        """ Initialize new cassette tape.
 
         :param name: Name of the cassette tape.
         :type name: str
-        :param band: Band's naem of the cassette tape.
+        :param band: Band's name of the cassette tape.
         :type band: str
         :param db: The database of the cassette tape collection.
         :type db: CollectionData

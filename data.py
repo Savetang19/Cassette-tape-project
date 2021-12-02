@@ -2,10 +2,36 @@ import json
 
 
 class CollectionData:
-    def __init__(self, name):
-        """ Initialize new database for the collection.
+    """ This class used to read and write a file as a json file in order to
+    access data from cassette tapes in collection.
 
-        :param name: Name of the database collection.
+    Attributes
+    ----------
+    name : str
+        Name of the collection's file.
+
+    Methods
+    -------
+    insert(cassette_tape: CassetteTape):
+        Insert new cassette tape data to the database.
+    search(tape_name: str):
+        Search and return data of cassette tape.
+    delete(tape_name: str):
+        Delete cassette tape data from the database.
+    all_tape():
+        Return names of all cassette tapes from the database.
+    search_song(song_name: str):
+        Search and return data of song.
+    all_song_in_tape(tape_name: str):
+        Find and return all song from the cassette tape.
+    url_open(tape_name: str):
+        Find and return youtube link of the cassette tape.
+    """
+
+    def __init__(self, name):
+        """ Initialize new database for the program.
+
+        :param name: name of the collection's file.
         :type name: str
         """
         self.name = name
@@ -84,7 +110,7 @@ class CollectionData:
             return "No collection data."
 
     def all_tape(self):
-        """ Return the names of all cassette tapes from the database.
+        """ Return names of all cassette tapes from the database.
 
         :return: All tapes name or string if no collection data.
         :rtype: list or str

@@ -5,17 +5,31 @@ import os
 
 
 class Stage:
+    """ This class use for print out all graphical output fro the program.
+
+    Methods
+    -------
+    init_screen():
+        Display welcome screen for the program.
+    select_menu():
+        Print menus list that the program can provide and ask user to choose.
+    print_all_menu():
+        Print all of the processes that the user has chosen.
+    """
+
     def __init__(self):
-        """ Initialize new stage for the program.
-        """
-        self.printer = Turtle()
-        self.screen = Screen()
+        """ Initialize a graphical for the program. """
+        self.__printer = Turtle()
+        self.__screen = Screen()
 
     def init_screen(self):
         """ Display welcome screen for the program.
+
+        :return: name of the collection data
+        :rtype: str
         """
-        p = self.printer
-        sc = self.screen
+        p = self.__printer
+        sc = self.__screen
         sc.title("Cassette tapes collection.")
         sc.screensize(600, 600)
         sc.bgcolor("#D3F3FF")
@@ -26,6 +40,9 @@ class Stage:
         p.shapesize(0.1)
         p.write("Welcome to cassette tapes collection.", True, "Center",
                 ("Consolas", 25, "normal"))
+        file_name = sc.textinput("Collection data file name",
+                                 "Please input data file's name: ")
+        return file_name
 
     def select_menu(self):
         """ This class is used for print all of the menus that the program can
@@ -35,8 +52,8 @@ class Stage:
         :rtype: str
         """
         tape = Turtle()  # Create new turtle as "tape" for print the picture.
-        p = self.printer
-        sc = self.screen
+        p = self.__printer
+        sc = self.__screen
         sc.clear()
         sc.addshape("tape.gif")
         tape.shape("tape.gif")
@@ -67,24 +84,27 @@ class Stage:
         p.goto(-190, 0)
         p.write("7. Open cassette tape on youtube.", True, "left",
                 ("Consolas", 18, "normal"))
-        # Ask about the menus that the user would like to select.
+        # Ask about the menus that user would like to select then return it.
         choice = sc.textinput("Select your choice", "1, 2, 3, 4, 5, 6 or 7")
         return choice
 
-    def print_all_menu(self):
+    def print_all_menu(self, db_name):
         """ This class is used to print all of the processes that the user has
         selected from the menus.
+
+        :param db_name: Name of the collection data.
+        :type db_name: str
         """
         choice = self.select_menu()
         tape = Turtle()
-        p = self.printer
-        sc = self.screen
+        p = self.__printer
+        sc = self.__screen
         sc.clear()
         sc.addshape("tape.gif")
         tape.shape("tape.gif")
         tape.penup()
         # Assign 'db' as the database for a collection.
-        db = CollectionData("tape_collection")
+        db = CollectionData(db_name)
         if choice == "1":
             # Ask user to input about the new cassette tape's information.
             tape_name = sc.textinput("Insert new tape",
@@ -135,7 +155,7 @@ class Stage:
                 p.goto(0, 225)
                 p.write(f"All cassette tapes: ", True, "left",
                         ("Consolas", 20, "normal"))
-                y = 200  # Assign 'y' as y coordinates for print out the results.
+                y = 200  # Assign 'y' as y coordinate for print out all results.
                 for num in range(len(all_tape)):
                     p.goto(20, y)
                     p.write(f"{num + 1}. {all_tape[num]}", True, "left",

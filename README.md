@@ -26,12 +26,14 @@ Three Python modules are also used in this program.
 For better experience please download font `Consolas` into your computer.
 
 ## About design
-There’s 3 classes in my project.
+There are 3 classes in my project.
 * `CassetteTape`: This class attributes will be basic info about cassette tape, which is used to create each
    cassette tape data.
 * `CollectionData`: This class will read and write a file as a json file in order to access data from cassette tapes as in user's collection.
 * `Stage`: This class is used to create all of the graphical output in this program such as print all the menus for user to choose.
 
+And here is class diagram of the program.
+![class_diagram](diagram.png)
 ## Code structure
 
 This program consists of four python files and another one json file for collection example.

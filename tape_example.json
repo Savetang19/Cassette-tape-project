@@ -22,7 +22,7 @@
             "we will rock you",
             "we are the champions"
         ],
-        "price": 200.0,
+        "price": 290.0,
         "link": "https://www.youtube.com/playlist?list=PL8Lpw39GxwbMzMIzJ7r_HXmhOT4ISXImG"
     },
     "\u0e40\u0e15\u0e47\u0e21\u0e16\u0e31\u0e07": {
@@ -41,7 +41,7 @@
             "\u0e16\u0e36\u0e07\u0e40\u0e1e\u0e37\u0e48\u0e2d\u0e19\u0e40\u0e23\u0e32",
             "\u0e40\u0e1b\u0e34\u0e14\u0e1f\u0e49\u0e32"
         ],
-        "price": 80.0,
+        "price": 120.0,
         "link": "https://www.youtube.com/playlist?list=OLAK5uy_mdUeDBOFy5jt6qoHdWMU8gi3hCXMlzWnU"
     },
     "\u0e44\u0e17\u0e17\u0e28\u0e21\u0e34\u0e15\u0e23": {
@@ -62,5 +62,42 @@
         ],
         "price": 690.0,
         "link": "https://www.youtube.com/playlist?list=OLAK5uy_lYAfz7wiK79iBeD6hWn5nyzdPmntfhJ9Y"
+    },
+    "Elvis the essential collection": {
+        "band": "Elvis",
+        "side_A": [
+            "heartbreak hotel",
+            "blue suede shoes",
+            "hound dog",
+            "don't be cruel",
+            "love me tender",
+            "all shook up",
+            "(let me be your) teddy bear",
+            "jailhouse rock",
+            "king creole",
+            "the girl of my best friend",
+            "it's now or never",
+            "are you lonesome tonight?",
+            "wooden heart",
+            "his latest flame",
+            "can't help falling in love",
+            "good luck charm"
+        ],
+        "side_B": [
+            "she's not you",
+            "return to sender",
+            "(you're the) devil in disguise",
+            "crying in the chapel",
+            "in the ghetto",
+            "suspicious minds",
+            "the wonder of you",
+            "i just can't help believin'",
+            "an american trilogy",
+            "burning love",
+            "always on my mind",
+            "moody blue"
+        ],
+        "price": 100.0,
+        "link": "https://www.youtube.com/playlist?list=PLMqxbsXmsLy8FuuRt78ydAC3dlY4RKwec"
     }
 }

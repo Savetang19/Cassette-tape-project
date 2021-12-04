@@ -33,7 +33,7 @@ There are 3 classes in my project.
 * `Stage`: This class is used to create all of the graphical output in this program such as print all the menus for user to choose.
 
 And here is class diagram of the program.
-![class_diagram](diagram.png)
+![class_diagram](class_diagram.png)
 ## Code structure
 
 This program consists of four python files and another one json file for collection example.

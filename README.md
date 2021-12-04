@@ -23,7 +23,7 @@ Three Python modules are also used in this program.
 * [`os`](https://docs.python.org/3/library/os.html?highlight=os#module-os), which is used to browse a URL.
 * [`json`](https://docs.python.org/3/library/json.html?highlight=json#module-json), which is used for data collection.
 
-For better experience please download font `Consolas` into your computer.
+For better experience please download font [`Consolas`](Consolas.ttf) into your computer.
 
 ## About design
 There are 3 classes in my project.

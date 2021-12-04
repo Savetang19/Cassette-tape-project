@@ -8,7 +8,7 @@ enjoy collecting cassette tapes.
 It's also has other menus for the user to choose and print out the results.
 
 **For the user's convenience, the program includes seven menus from which they can choose:**
-* Inset new tape.
+* Insert new tape.
 * Search tape from collection.
 * Delete tape from collection.
 * Show all cassette tapes in collection.

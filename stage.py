@@ -64,7 +64,7 @@ class Stage:
         p.write("Please select your choice.", True, "left",
                 ("Consolas", 18, "normal"))
         p.goto(-190, 180)
-        p.write("1. Inset new tape.", True, "left",
+        p.write("1. Insert new tape.", True, "left",
                 ("Consolas", 18, "normal"))
         p.goto(-190, 150)
         p.write("2. Search tape from collection.", True, "left",

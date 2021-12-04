@@ -5,7 +5,14 @@ import os
 
 
 class Stage:
-    """ This class use for print out all graphical output fro the program.
+    """ This class use for print out all graphical output for the program.
+
+    Attributes
+    ----------
+    __printer: Turtle()
+        Use as printer for the graphic.
+    __screen: Screen()
+        Use as Screen for the graphic.
 
     Methods
     -------

@@ -12,6 +12,14 @@ class CassetteTape:
         Band's name of the cassette tape.
     db: CollectionData
         The database of the cassette tape collection.
+    sidea: list
+        List of song on side A.
+    sideb: list
+        List of song on side B.
+    price: int, float
+        Cassette tape price.
+    url: str
+        URL youtube for cassette tape.
     """
 
     def __init__(self, name, band, db):

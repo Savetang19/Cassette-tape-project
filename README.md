@@ -5,7 +5,7 @@ enjoy collecting cassette tapes.
 
 ## Overview and features
    The main program will ask user for cassette tape data, which will be collected in collection data (If there is no any data file).
-It's also has other menus for the user to choose and print out the graphic.
+It's also has other menus for the user to choose and print out the results.
 
 **For the user's convenience, the program includes seven menus from which they can choose:**
 * Inset new tape.
@@ -44,7 +44,7 @@ This program consists of four python files and another one json file for collect
 * [app](app.py): This file is used to run the main program.
 * [tape_example](tape_example.json): This file is an example of cassette tape collection.
 
-### I hope you find my work interesting :)
+### I hope you find my work interesting, thank you :)
 
 ![screen](tape.gif)
 

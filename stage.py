@@ -10,10 +10,10 @@ class Stage:
     Methods
     -------
     init_screen():
-        Display welcome screen for the program.
+        Display welcome screen for the program and ask user for data file's name.
     select_menu():
         Print menus list that the program can provide and ask user to choose.
-    print_all_menu():
+    print_all_menu(db_name):
         Print all of the processes that the user has chosen.
     """
 

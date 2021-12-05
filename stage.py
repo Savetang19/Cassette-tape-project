@@ -30,7 +30,8 @@ class Stage:
         self.__screen = Screen()
 
     def init_screen(self):
-        """ Display welcome screen for the program.
+        """ Display welcome screen for the program and ask user for the data
+        file's name then return it.
 
         :return: name of the collection data
         :rtype: str
